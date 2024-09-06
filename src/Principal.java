@@ -1,4 +1,6 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Principal {
     private JTextField txtNumR2;
@@ -16,6 +18,15 @@ public class Principal {
     private JPanel pnlOps;
     private JTextField txtRD;
 
+
+    public Principal() {
+        btnCalcular.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+    }
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
