@@ -28,7 +28,7 @@ public class Principal {
                     JOptionPane.showMessageDialog(null,n1+n2,"Suma",JOptionPane.PLAIN_MESSAGE);
                     n1 = 0;
                     n2 = 0;
-
+                    //
                 }
                 else{
                     JOptionPane.showMessageDialog(null, "Falta otro número para hacer la operación","Error Suma",JOptionPane.PLAIN_MESSAGE);
