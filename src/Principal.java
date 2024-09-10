@@ -12,11 +12,7 @@ public class Principal {
     private JTextField txtNumS1;
     private JTextField txtNumS2;
     private JButton btnCalcular;
-    private JTextField txtRS;
-    private JTextField txtRR;
-    private JTextField txtRM;
     private JPanel pnlOps;
-    private JTextField txtRD;
     private JButton btnBorrar;
     int n1,  n2;
 
@@ -28,33 +24,35 @@ public class Principal {
                 if(!txtNumS2.getText().equals("") && !txtNumS1.getText().equals(""))  {
                      n1 = Integer.parseInt(txtNumS1.getText());
                      n2 = Integer.parseInt(txtNumS2.getText());
-                    txtRS.setText(Integer.toString(n1 + n2));
+                    //txtRS.setText(Integer.toString(n1 + n2));
+                    JOptionPane.showMessageDialog(null,n1+n2,"Suma",JOptionPane.PLAIN_MESSAGE);
                     n1 = 0;
                     n2 = 0;
-                    //txtRS.setText("0");
+
                 }
                 else{
+                    JOptionPane.showMessageDialog(null, "Falta otro número para hacer la operación","Error Suma",JOptionPane.PLAIN_MESSAGE);
                 }
 
                 if(!txtNumR2.getText().equals("") && !txtNumR1.getText().equals("")) {
                     n1 = Integer.parseInt(txtNumR1.getText());
                     n2 = Integer.parseInt(txtNumR2.getText());
-                    txtRR.setText(Integer.toString(n1 - n2));
+                    JOptionPane.showMessageDialog(null,n1-n2,"Resta",JOptionPane.PLAIN_MESSAGE);
                     n1 = 0;
                     n2 = 0;
                 }
                 else{
-
+                    JOptionPane.showMessageDialog(null, "Falta otro número para hacer la operación","Error en Resta",JOptionPane.PLAIN_MESSAGE);
                 }
                 if(!txtNumM2.getText().equals("") && !txtNumM1.getText().equals("")) {
                     n1 = Integer.parseInt(txtNumM1.getText());
                     n2 = Integer.parseInt(txtNumM2.getText());
-                    txtRM.setText(Integer.toString(n1 * n2));
+                    JOptionPane.showMessageDialog(null,n1*n2,"Multiplicación",JOptionPane.PLAIN_MESSAGE);
                     n1 = 0;
                     n2 = 0;
                 }
                 else {
-
+                    JOptionPane.showMessageDialog(null, "Falta otro número para hacer la operación","Error en Multiplicación",JOptionPane.PLAIN_MESSAGE);
                 }
                 if(!txtNumD2.getText().equals("") && !txtNumD1.getText().equals("")) {
                     double n3;
@@ -62,12 +60,13 @@ public class Principal {
                     n3 = Double.parseDouble(txtNumD1.getText());
                     n4 = Double.parseDouble(txtNumD2.getText());
 
-                    txtRD.setText(Double.toString(n3 / n4));
+                    JOptionPane.showMessageDialog(null,n3/n4,"División",JOptionPane.PLAIN_MESSAGE);
+
                     n3 = 0;
                     n4 = 0;
                 }
                 else {
-
+                    JOptionPane.showMessageDialog(null, "Falta otro número para hacer la operación","Error en División",JOptionPane.PLAIN_MESSAGE);
                 }
             }
         });
@@ -83,10 +82,6 @@ public class Principal {
                 txtNumM2.setText("");
                 txtNumD1.setText("");
                 txtNumD2.setText("");
-                txtRS.setText("");
-                txtRR.setText("");
-                txtRM.setText("");
-                txtRD.setText("");
             }
         });
     }
